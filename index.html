@@ -160,12 +160,8 @@
 
   /* Pricing */
   .price-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-  .price-card.featured { border-color: var(--accent); box-shadow: 0 14px 34px rgba(255, 90, 54, 0.13); }
-  .tier-badge {
-    display: inline-block; background: var(--accent); color: #ffffff;
-    font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
-    padding: 5px 11px; border-radius: 999px; margin-bottom: 14px;
-  }
+  .plan-actions { margin-top: 22px; display: grid; gap: 10px; }
+  .plan-actions .btn { text-align: center; padding: 13px 18px; font-size: 15.5px; }
   .price-mo { margin: -8px 0 16px; color: var(--muted); font-size: 15.5px; }
   .price-mo b { color: var(--text); }
   .care-label {
@@ -240,6 +236,18 @@
     .js .reveal { opacity: 1; transform: none; transition: none; }
     .card, .tile, .btn, .js .acc-panel { transition: none; }
   }
+
+  /* Desktop layout, wide screens only. Mobile rendering is unchanged. */
+  @media (min-width: 1024px) {
+    .wrap { max-width: 1140px; }
+    .hero h1 { font-size: 62px; max-width: 1040px; }
+    .check-panel {
+      max-width: none;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .check-item { margin-bottom: 0; }
+    .check-result { grid-column: 1 / -1; }
+  }
 </style>
 </head>
 <body>
@@ -255,7 +263,7 @@
       <a href="#work">The Work</a>
       <a href="#answers">Answers</a>
     </nav>
-    <a class="head-cta" href="sms:+18185550100">Text Us</a>
+    <a class="head-cta" href="sms:+13235469820">Text Us</a>
   </div>
 </header>
 
@@ -270,7 +278,7 @@
       <div class="chip">Live in <b>7 days</b></div>
     </div>
     <div class="btn-row">
-      <a class="btn btn-main" href="sms:+18185550100">Text us to start</a>
+      <a class="btn btn-main" href="sms:+13235469820">Text us to start</a>
       <a class="btn btn-alt" href="#work">See the work</a>
     </div>
   </div>
@@ -289,7 +297,7 @@
       <div class="check-result">
         <div class="check-count"><span id="checkCount">0 of 5</span><small>sound familiar</small></div>
         <p class="check-verdict" id="checkVerdict">Tick anything that sounds like your shop.</p>
-        <a class="btn btn-main" id="checkCta" href="sms:+18185550100">Text us about it</a>
+        <a class="btn btn-main" id="checkCta" href="sms:+13235469820">Text us about it</a>
       </div>
     </div>
   </div>
@@ -357,9 +365,12 @@
           <li>Hours kept right</li>
           <li>One proof email a month</li>
         </ul>
+        <div class="plan-actions">
+          <a class="btn btn-main" href="sms:+13235469820?&body=Hi%20Mike%2C%20I%20want%20details%20on%20Profile%20Only%20(%24495%20setup%20%2B%20%2475%2Fmo).%20My%20shop%20is%3A%20">Ask about Profile Only</a>
+          <a class="btn btn-alt" href="mailto:mike@mwwebco.com?subject=Details%20on%20Profile%20Only&body=Shop%20name%3A%20%0ATrade%3A%20%0ACity%3A%20">Email about this plan</a>
+        </div>
       </div>
-      <div class="card price-card featured reveal d1">
-        <span class="tier-badge">The standard choice</span>
+      <div class="card price-card reveal d1">
         <div class="card-head">
           <h3>The Bundle</h3>
           <div class="price-tag">$1,495<small>setup</small></div>
@@ -376,6 +387,10 @@
           <li>1 hour of edits a month</li>
           <li>One combined monthly report</li>
         </ul>
+        <div class="plan-actions">
+          <a class="btn btn-main" href="sms:+13235469820?&body=Hi%20Mike%2C%20I%20want%20details%20on%20The%20Bundle%20(%241%2C495%20setup%20%2B%20%24150%2Fmo).%20My%20shop%20is%3A%20">Ask about the Bundle</a>
+          <a class="btn btn-alt" href="mailto:mike@mwwebco.com?subject=Details%20on%20The%20Bundle&body=Shop%20name%3A%20%0ATrade%3A%20%0ACity%3A%20">Email about this plan</a>
+        </div>
       </div>
       <div class="card price-card reveal d2">
         <div class="card-head">
@@ -394,6 +409,10 @@
           <li>A mid month check in report</li>
           <li>A quarterly services and prices review</li>
         </ul>
+        <div class="plan-actions">
+          <a class="btn btn-main" href="sms:+13235469820?&body=Hi%20Mike%2C%20I%20want%20details%20on%20Bundle%20Plus%20Text%20Back%20(%241%2C995%20setup%20%2B%20%24299%2Fmo).%20My%20shop%20is%3A%20">Ask about Bundle Plus Text Back</a>
+          <a class="btn btn-alt" href="mailto:mike@mwwebco.com?subject=Details%20on%20Bundle%20Plus%20Text%20Back&body=Shop%20name%3A%20%0ATrade%3A%20%0ACity%3A%20">Email about this plan</a>
+        </div>
       </div>
     </div>
     <p class="price-note reveal">Half the setup starts the work, half is due at launch. Every plan is month to month.</p>
@@ -488,8 +507,8 @@
     <div class="contact-box reveal">
       <p>Send your shop name and what you do. That is enough to start.</p>
       <div class="btn-row">
-        <a class="btn btn-main" href="sms:+18185550100">Text (818) 555-0100</a>
-        <a class="btn btn-alt" href="mailto:hello@mwwebco.com">Email hello@mwwebco.com</a>
+        <a class="btn btn-main" href="sms:+13235469820">Text (323) 546-9820</a>
+        <a class="btn btn-alt" href="mailto:mike@mwwebco.com">Email mike@mwwebco.com</a>
       </div>
       <p class="reply-note">You will hear back within one business day.</p>
       <p class="reply-note">Rather talk it through? <a href="https://calendly.com/michaelwhisenand/discovery-call">Book a call</a></p>
@@ -505,8 +524,8 @@
 </footer>
 
 <div class="contactbar">
-  <a class="cb-text" href="sms:+18185550100">Text Us</a>
-  <a class="cb-mail" href="mailto:hello@mwwebco.com">Email Us</a>
+  <a class="cb-text" href="sms:+13235469820">Text Us</a>
+  <a class="cb-mail" href="mailto:mike@mwwebco.com">Email Us</a>
 </div>
 
 <script>

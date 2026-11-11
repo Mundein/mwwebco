@@ -7,179 +7,108 @@
 <meta name="description" content="Summit Door Co. is a family owned garage door company in Burbank, CA. Spring repair, opener repair and install, new doors, gate repair, and same day emergency service.">
 <style>
 * { box-sizing: border-box }
-body { margin: 0 }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif }
-body { color: #23272b }
-body { background: #ffffff }
-body { line-height: 1.55 }
-body { padding-bottom: 64px }
-a { color: #a44a12 }
-.wrap { max-width: 1080px }
-.wrap { margin: 0 auto }
-.wrap { padding: 0 18px }
-header { background: #23272b }
-header { color: #ffffff }
-.header-in { display: flex }
-.header-in { flex-wrap: wrap }
-.header-in { align-items: center }
-.header-in { justify-content: space-between }
-.header-in { gap: 8px 20px }
-.header-in { padding-top: 14px }
-.header-in { padding-bottom: 14px }
-.logo { font-size: 22px }
-.logo { font-weight: 700 }
-.logo { letter-spacing: 0.2px }
-.logo small { display: block }
-.logo small { font-size: 12px }
-.logo small { font-weight: 400 }
-.logo small { color: #c9ced4 }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #2a2a26;
+  background: #faf7f2;
+  line-height: 1.55;
+  padding-bottom: 64px;
+}
+h1, h2, h3, .logo, .hero-phone, .price { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif }
+a { color: #1e4d3b }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #c08a2d; outline-offset: 2px }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 18px }
+
+/* Top bar */
+header { background: #1e4d3b; color: #f5efe0; border-bottom: 4px solid #c08a2d }
+.header-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; padding-top: 16px; padding-bottom: 16px }
+.logo { font-size: 26px; font-weight: 700; letter-spacing: 0.3px; color: #fbf7ec }
+.logo small { display: block; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 1.6px; text-transform: uppercase; color: #cfd8c9; margin-top: 3px }
 .header-contact { text-align: right }
-.header-phone { color: #ffffff }
-.header-phone { font-size: 19px }
-.header-phone { font-weight: 700 }
-.header-phone { text-decoration: none }
-.header-hours { font-size: 13px }
-.header-hours { color: #c9ced4 }
-.hero { background: #f4f1ec }
-.hero { padding-top: 34px }
-.hero { padding-bottom: 34px }
-.hero h1 { font-size: 30px }
-.hero h1 { line-height: 1.2 }
-.hero h1 { margin: 0 0 12px 0 }
-.hero p { font-size: 17px }
-.hero p { margin: 0 0 20px 0 }
-.hero p { max-width: 560px }
-.btn-row { display: flex }
-.btn-row { flex-wrap: wrap }
-.btn-row { gap: 12px }
-.btn { display: inline-block }
-.btn { padding: 13px 22px }
-.btn { border-radius: 6px }
-.btn { font-size: 16px }
-.btn { font-weight: 700 }
-.btn { text-decoration: none }
-.btn-call { background: #a44a12 }
-.btn-call { color: #ffffff }
-.btn-text { background: #ffffff }
-.btn-text { color: #23272b }
-.btn-text { border: 2px solid #23272b }
-.hero-note { margin-top: 16px }
-.hero-note { font-size: 14px }
-.hero-note { color: #555b61 }
-section { padding-top: 34px }
-section { padding-bottom: 6px }
-h2 { font-size: 23px }
-h2 { margin: 0 0 6px 0 }
-.section-sub { color: #555b61 }
-.section-sub { margin: 0 0 18px 0 }
-.services { display: grid }
-.services { grid-template-columns: 1fr }
-.services { gap: 14px }
-.service { border: 1px solid #ddd6cc }
-.service { border-radius: 8px }
-.service { padding: 16px 18px }
-.service h3 { font-size: 17px }
-.service h3 { margin: 0 0 4px 0 }
-.service p { margin: 0 0 8px 0 }
-.service p { color: #444a4f }
-.price { font-weight: 700 }
-.price { color: #a44a12 }
-.why { background: #23272b }
-.why { color: #ffffff }
-.why { margin-top: 34px }
-.why { padding-bottom: 30px }
-.why h2 { color: #ffffff }
-.why-grid { display: grid }
-.why-grid { grid-template-columns: 1fr 1fr }
-.why-grid { gap: 14px 20px }
+.header-phone { display: inline-block; background: #c08a2d; color: #241c0c; font-size: 17px; font-weight: 700; text-decoration: none; padding: 9px 16px; border-radius: 4px }
+.header-hours { font-size: 13px; color: #cfd8c9; margin-top: 7px }
+
+/* Hero */
+.hero { padding-top: 40px; padding-bottom: 38px; border-bottom: 3px double #c08a2d }
+.hero h1 { font-size: 34px; line-height: 1.15; margin: 0 0 14px 0; color: #1e4d3b; max-width: 640px }
+.hero p { font-size: 17px; margin: 0 0 18px 0; max-width: 560px }
+.hero-phone { display: inline-block; font-size: 30px; font-weight: 700; color: #1e4d3b; text-decoration: none; border-bottom: 3px solid #c08a2d; padding-bottom: 2px; margin-bottom: 22px }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px }
+.btn { display: inline-block; padding: 13px 22px; border-radius: 4px; font-size: 16px; font-weight: 700; text-decoration: none }
+.btn-call { background: #1e4d3b; color: #fbf7ec }
+.btn-text { background: transparent; color: #1e4d3b; border: 2px solid #1e4d3b }
+.hero-note { margin-top: 18px; font-size: 14px; color: #66635a }
+
+/* Sections */
+section { padding-top: 38px; padding-bottom: 10px }
+h2 { font-size: 26px; margin: 0 0 6px 0; color: #1e4d3b }
+h2::after { content: ""; display: block; width: 46px; height: 3px; background: #c08a2d; margin-top: 9px }
+.section-sub { color: #66635a; margin: 0 0 20px 0 }
+
+/* Services */
+.services { display: grid; grid-template-columns: 1fr; gap: 14px }
+.service { background: #fffdf8; border: 1px solid #e2d9c3; border-top: 4px solid #1e4d3b; border-radius: 4px; padding: 18px }
+.service h3 { font-size: 19px; margin: 0 0 5px 0; color: #1e4d3b }
+.service p { margin: 0 0 10px 0; color: #45443c }
+.price { font-weight: 700; font-size: 17px; color: #9a6d1e }
+
+/* Why band */
+.why { background: #1e4d3b; color: #f0ead6; margin-top: 40px; padding-bottom: 34px }
+.why h2 { color: #fbf7ec }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 22px }
 .why-item { font-size: 15px }
-.why-item strong { display: block }
-.why-item strong { font-size: 16px }
-.reviews { display: grid }
-.reviews { grid-template-columns: 1fr }
-.reviews { gap: 14px }
-.review { background: #f7f5f2 }
-.review { border-radius: 8px }
-.review { padding: 16px 18px }
+.why-item strong { display: block; font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif; font-size: 17px; color: #fbf7ec; margin-bottom: 2px }
+
+/* Reviews */
+.reviews-band { background: #f2ebdb; margin-top: 40px; padding-bottom: 40px }
+.reviews { display: grid; grid-template-columns: 1fr; gap: 14px }
+.review { background: #fffdf8; border: 1px solid #e2d9c3; border-left: 4px solid #c08a2d; border-radius: 4px; padding: 18px }
+.review::before { content: "\201C"; display: block; font-family: Georgia, "Iowan Old Style", serif; font-size: 40px; line-height: 0.6; color: #c08a2d; margin-bottom: 12px }
 .review p { margin: 0 0 10px 0 }
-.review .who { font-size: 14px }
-.review .who { color: #555b61 }
-.areas { columns: 2 }
-.areas { list-style: none }
-.areas { margin: 0 }
-.areas { padding: 0 }
-.areas li { padding: 5px 0 }
-.areas li { border-bottom: 1px solid #eee9e2 }
-.contact-box { background: #f4f1ec }
-.contact-box { border-radius: 8px }
-.contact-box { padding: 20px 18px }
+.review .who { font-size: 14px; color: #66635a; font-style: italic }
+
+/* Hours and service area */
+.visit { display: grid; grid-template-columns: 1fr; gap: 26px }
+.hours-card { background: #fffdf8; border: 1px solid #e2d9c3; border-top: 4px solid #c08a2d; border-radius: 4px; padding: 18px }
+.hours-card h3 { font-size: 19px; margin: 0 0 10px 0; color: #1e4d3b }
+.hours-row { display: flex; justify-content: space-between; gap: 14px; padding: 7px 0; border-bottom: 1px dotted #cfc4a5; font-size: 15px }
+.hours-row:last-child { border-bottom: none }
+.hours-row span:first-child { font-weight: 700 }
+.areas { columns: 2; list-style: none; margin: 0; padding: 18px; background: #fffdf8; border: 1px solid #e2d9c3; border-top: 4px solid #c08a2d; border-radius: 4px }
+.areas li { padding: 7px 0; border-bottom: 1px solid #e7dfca; font-size: 15px }
+.areas li:last-child { border-bottom: none }
+
+/* Contact */
+.contact-box { background: #f2ebdb; border: 1px solid #e2d9c3; border-radius: 4px; padding: 22px 18px }
 .contact-box p { margin-top: 0 }
-label { display: block }
-label { font-weight: 700 }
-label { font-size: 14px }
-label { margin: 14px 0 5px 0 }
-input { width: 100% }
-input { padding: 11px 12px }
-input { font-size: 16px }
-input { border: 1px solid #bdb5a9 }
-input { border-radius: 6px }
-textarea { width: 100% }
-textarea { padding: 11px 12px }
-textarea { font-size: 16px }
-textarea { border: 1px solid #bdb5a9 }
-textarea { border-radius: 6px }
+label { display: block; font-weight: 700; font-size: 14px; margin: 14px 0 5px 0 }
+input, textarea { width: 100%; padding: 11px 12px; font-size: 16px; border: 1px solid #c9bc9c; border-radius: 4px; background: #fffdf8; color: #2a2a26 }
 textarea { font-family: inherit }
-.submit { margin-top: 18px }
-.submit { background: #a44a12 }
-.submit { color: #ffffff }
-.submit { border: none }
-.submit { padding: 13px 26px }
-.submit { font-size: 16px }
-.submit { font-weight: 700 }
-.submit { border-radius: 6px }
-.submit { cursor: pointer }
-.thanks { background: #eef4ea }
-.thanks { border: 1px solid #b9cfae }
-.thanks { border-radius: 6px }
-.thanks { padding: 14px 16px }
-.thanks { margin-top: 16px }
-footer { margin-top: 40px }
-footer { background: #23272b }
-footer { color: #c9ced4 }
-footer { padding-top: 26px }
-footer { padding-bottom: 30px }
-footer { font-size: 14px }
-footer a { color: #ffffff }
-footer .foot-name { color: #ffffff }
-footer .foot-name { font-size: 16px }
-footer .foot-name { font-weight: 700 }
+.submit { margin-top: 18px; background: #1e4d3b; color: #fbf7ec; border: none; padding: 13px 26px; font-size: 16px; font-weight: 700; border-radius: 4px; cursor: pointer }
+.thanks { background: #eef4ea; border: 1px solid #b9cfae; border-radius: 4px; padding: 14px 16px; margin-top: 16px }
+
+/* Footer */
+footer { margin-top: 44px; background: #143527; color: #d8d2bd; padding-top: 28px; padding-bottom: 32px; font-size: 14px }
+footer a { color: #f5efe0 }
+footer .foot-name { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif; color: #fbf7ec; font-size: 19px; font-weight: 700 }
 footer p { margin: 4px 0 }
-.demo-line { margin-top: 16px }
-.demo-line { font-size: 12px }
-.demo-line { color: #8f959c }
-.callbar { position: fixed }
-.callbar { left: 0 }
-.callbar { right: 0 }
-.callbar { bottom: 0 }
-.callbar { background: #a44a12 }
-.callbar { text-align: center }
-.callbar { z-index: 50 }
-.callbar a { display: block }
-.callbar a { color: #ffffff }
-.callbar a { font-weight: 700 }
-.callbar a { font-size: 17px }
-.callbar a { text-decoration: none }
-.callbar a { padding: 15px 10px }
+.demo-line { margin-top: 16px; font-size: 12px; color: #9db3a6 }
+
+/* Mobile call bar */
+.callbar { position: fixed; left: 0; right: 0; bottom: 0; background: #c08a2d; text-align: center; z-index: 50 }
+.callbar a { display: block; color: #241c0c; font-weight: 700; font-size: 17px; text-decoration: none; padding: 15px 10px }
+
 @media (min-width: 720px) {
   body { padding-bottom: 0 }
   .callbar { display: none }
-  .hero { padding-top: 54px }
-  .hero { padding-bottom: 54px }
-  .hero h1 { font-size: 40px }
+  .hero { padding-top: 58px; padding-bottom: 54px }
+  .hero h1 { font-size: 46px }
+  .hero-phone { font-size: 34px }
   .services { grid-template-columns: 1fr 1fr 1fr }
   .reviews { grid-template-columns: 1fr 1fr 1fr }
   .why-grid { grid-template-columns: 1fr 1fr 1fr 1fr }
-  .areas { columns: 4 }
+  .visit { grid-template-columns: 1.2fr 1fr; gap: 40px }
 }
 </style>
 </head>
@@ -189,7 +118,7 @@ footer p { margin: 4px 0 }
   <div class="wrap header-in">
     <div class="logo">Summit Door Co.<small>Garage Doors and Gates, Burbank CA</small></div>
     <div class="header-contact">
-      <a class="header-phone" href="tel:+18185550147">(818) 555-0147</a>
+      <a class="header-phone" href="tel:+18185550147">Call (818) 555-0147</a>
       <div class="header-hours">Mon to Fri 7am to 6pm, Sat 8am to 4pm</div>
     </div>
   </div>
@@ -199,6 +128,7 @@ footer p { margin: 4px 0 }
   <div class="wrap">
     <h1>Garage door broken? We fix it today.</h1>
     <p>Family owned since 2009. We repair springs, openers, and gates across the Valley, and we install new doors when the old one is done. Straight prices, quoted before we start.</p>
+    <a class="hero-phone" href="tel:+18185550147">(818) 555-0147</a>
     <div class="btn-row">
       <a class="btn btn-call" href="tel:+18185550147">Call (818) 555-0147</a>
       <a class="btn btn-text" href="sms:+18185550147">Text Us</a>
@@ -255,41 +185,52 @@ footer p { margin: 4px 0 }
   </div>
 </div>
 
-<section>
+<div class="reviews-band">
   <div class="wrap">
-    <h2>What neighbors say</h2>
-    <p class="section-sub">Recent jobs, in their words.</p>
-    <div class="reviews">
-      <div class="review">
-        <p>Spring snapped Tuesday morning and the car was stuck in the garage. They came out that afternoon and had it working by dinner. Price matched the quote they gave on the phone.</p>
-        <div class="who">Mark T., Burbank</div>
+    <section>
+      <h2>What neighbors say</h2>
+      <p class="section-sub">Recent jobs, in their words.</p>
+      <div class="reviews">
+        <div class="review">
+          <p>Spring snapped Tuesday morning and the car was stuck in the garage. They came out that afternoon and had it working by dinner. Price matched the quote they gave on the phone.</p>
+          <div class="who">Mark T., Burbank</div>
+        </div>
+        <div class="review">
+          <p>Our opener died and I figured they would sell us a whole new unit. They replaced the motor and a worn gear instead and told us the rest was fine. It was cheaper than I expected.</p>
+          <div class="who">Denise R., Glendale</div>
+        </div>
+        <div class="review">
+          <p>Side gate was dragging and scraping every time it opened. They adjusted the hinges and swapped two rollers. Quiet now, and nobody tried to sell me a new gate.</p>
+          <div class="who">Sam K., North Hollywood</div>
+        </div>
       </div>
-      <div class="review">
-        <p>Our opener died and I figured they would sell us a whole new unit. They replaced the motor and a worn gear instead and told us the rest was fine. It was cheaper than I expected.</p>
-        <div class="who">Denise R., Glendale</div>
-      </div>
-      <div class="review">
-        <p>Side gate was dragging and scraping every time it opened. They adjusted the hinges and swapped two rollers. Quiet now, and nobody tried to sell me a new gate.</p>
-        <div class="who">Sam K., North Hollywood</div>
-      </div>
-    </div>
+    </section>
   </div>
-</section>
+</div>
 
 <section>
   <div class="wrap">
     <h2>Service area</h2>
     <p class="section-sub">Based in Burbank, working across the east Valley.</p>
-    <ul class="areas">
-      <li>Burbank</li>
-      <li>Glendale</li>
-      <li>North Hollywood</li>
-      <li>Studio City</li>
-      <li>Sherman Oaks</li>
-      <li>Toluca Lake</li>
-      <li>Sun Valley</li>
-      <li>La Crescenta</li>
-    </ul>
+    <div class="visit">
+      <ul class="areas">
+        <li>Burbank</li>
+        <li>Glendale</li>
+        <li>North Hollywood</li>
+        <li>Studio City</li>
+        <li>Sherman Oaks</li>
+        <li>Toluca Lake</li>
+        <li>Sun Valley</li>
+        <li>La Crescenta</li>
+      </ul>
+      <div class="hours-card">
+        <h3>Hours</h3>
+        <div class="hours-row"><span>Mon to Fri</span><span>7am to 6pm</span></div>
+        <div class="hours-row"><span>Sat</span><span>8am to 4pm</span></div>
+        <div class="hours-row"><span>Sun</span><span>Closed</span></div>
+        <div class="hours-row"><span>Emergency calls</span><span>Any time</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -321,7 +262,7 @@ footer p { margin: 4px 0 }
     <p>Phone: <a href="tel:+18185550147">(818) 555-0147</a></p>
     <p>Hours: Mon to Fri 7am to 6pm, Sat 8am to 4pm, Sun closed. Emergency calls any time.</p>
     <p>Licensed and insured. CA Contractor License #842317.</p>
-    <p class="demo-line">Demo website built as a work sample.</p>
+    <p class="demo-line">Demo website built as a work sample. <a href="./">Back to MW Web Co.</a></p>
   </div>
 </footer>
 
