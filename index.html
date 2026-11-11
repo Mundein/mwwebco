@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MW Web Co. | Websites and Google Profiles for Local Trade Shops</title>
+<meta name="description" content="MW Web Co. builds small websites and cleans up Google Business Profiles for local trade shops in Los Angeles. No calls, no meetings, everything by text and email, live in 7 days.">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+  :root {
+    --bg: #0b0f19;
+    --panel: #131a2b;
+    --panel2: #0f1524;
+    --border: #1e293b;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #ff5a36;
+    --accent-dark: #e04427;
+    --gold: #fbbf24;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    padding-bottom: 62px;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 64px 0 8px; scroll-margin-top: 84px; }
+  h2 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 28px; font-size: 17px; max-width: 560px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(11, 15, 25, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  header.scrolled { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+  .header-in {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 16px 0; transition: padding 0.25s ease;
+  }
+  header.scrolled .header-in { padding: 9px 0; }
+  .logo { font-size: 21px; font-weight: 800; letter-spacing: 0.2px; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .logo small { display: block; font-size: 11.5px; font-weight: 400; color: var(--muted); letter-spacing: 0.4px; }
+  nav { display: none; gap: 26px; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 600; transition: color 0.2s ease; }
+  nav a:hover { color: var(--text); }
+  .head-cta {
+    background: var(--accent); color: #ffffff; text-decoration: none; font-weight: 700;
+    padding: 10px 18px; border-radius: 9px; font-size: 15px;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+  .head-cta:hover { background: var(--accent-dark); }
+  .head-cta:active { transform: scale(0.97); }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; padding: 72px 0 30px; }
+  .hero::before {
+    content: ""; position: absolute; inset: -40%;
+    background:
+      radial-gradient(420px 300px at 18% 30%, rgba(255, 90, 54, 0.16), transparent 65%),
+      radial-gradient(520px 360px at 85% 15%, rgba(251, 191, 36, 0.08), transparent 65%),
+      radial-gradient(600px 420px at 60% 90%, rgba(38, 84, 160, 0.14), transparent 65%);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; }
+  .eyebrow { color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: 2.2px; text-transform: uppercase; margin: 0 0 16px; }
+  .hero h1 { font-size: 38px; line-height: 1.14; margin: 0 0 18px; letter-spacing: -0.015em; max-width: 760px; }
+  .hero .lede { font-size: 19px; color: var(--muted); margin: 0 0 26px; max-width: 600px; }
+  .rotator { color: var(--accent); display: inline-block; font-weight: 700; transition: opacity 0.4s ease, transform 0.4s ease; white-space: nowrap; }
+  .rotator.fade { opacity: 0; transform: translateY(6px); }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 30px; }
+  .chip {
+    border: 1px solid var(--border); background: var(--panel); color: var(--text);
+    padding: 9px 16px; border-radius: 999px; font-size: 15px; font-weight: 700;
+  }
+  .chip b { color: var(--accent); font-weight: 800; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 15px 26px; border-radius: 10px;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-main { background: var(--accent); color: #ffffff; box-shadow: 0 8px 24px rgba(255, 90, 54, 0.28); }
+  .btn-main:hover { background: var(--accent-dark); transform: translateY(-2px); }
+  .btn-alt { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-alt:hover { border-color: var(--muted); transform: translateY(-2px); }
+
+  /* Reveal */
+  .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .js .reveal.d1 { transition-delay: 0.08s; }
+  .js .reveal.d2 { transition-delay: 0.16s; }
+
+  /* Self check */
+  .check-panel {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px 22px; max-width: 720px;
+  }
+  .check-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 13px 14px; border: 1px solid var(--border); border-radius: 10px;
+    margin-bottom: 10px; cursor: pointer; background: var(--panel2);
+    transition: border-color 0.2s ease, background 0.2s ease;
+    font-size: 16.5px;
+  }
+  .check-item:hover { border-color: var(--muted); }
+  .check-item input { width: 21px; height: 21px; margin-top: 2px; accent-color: var(--accent); flex: none; cursor: pointer; }
+  .check-item:has(input:checked) { border-color: var(--accent); background: rgba(255, 90, 54, 0.07); }
+  .check-result { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 20px; }
+  .check-count { font-size: 40px; font-weight: 800; line-height: 1; color: var(--accent); min-width: 118px; }
+  .check-count small { display: block; font-size: 12.5px; color: var(--muted); font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; margin-top: 5px; }
+  .check-verdict { font-size: 17px; font-weight: 600; flex: 1; min-width: 220px; margin: 0; }
+  #checkCta { opacity: 0.35; pointer-events: none; transition: opacity 0.3s ease; }
+  #checkCta.live { opacity: 1; pointer-events: auto; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px 24px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+  .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45); }
+  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+  .card h3 { font-size: 20px; margin: 0; }
+  .price-tag { color: var(--accent); font-weight: 800; font-size: 19px; white-space: nowrap; }
+  .price-tag small { display: block; color: var(--muted); font-size: 12.5px; font-weight: 600; text-align: right; }
+  .card ul { list-style: none; margin: 0; padding: 0; }
+  .card li { padding: 7px 0 7px 28px; position: relative; color: #dbe4ee; font-size: 16px; }
+  .card li::before { content: "\2713"; position: absolute; left: 2px; color: var(--accent); font-weight: 800; }
+  .work-card p { color: var(--muted); margin: 0 0 16px; font-size: 16px; }
+  .work-link { font-weight: 700; text-decoration: none; }
+  .work-link:hover { text-decoration: underline; }
+
+  /* Steps */
+  .tiles { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .tile {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 22px 20px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+  .tile:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .tile .num {
+    font-size: 30px; font-weight: 800; color: var(--accent); line-height: 1;
+    display: block; margin-bottom: 12px;
+  }
+  .tile h3 { font-size: 17.5px; margin: 0 0 6px; }
+  .tile p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  /* Pricing */
+  .price-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .price-card.featured { border-color: var(--accent); box-shadow: 0 14px 34px rgba(255, 90, 54, 0.13); }
+  .tier-badge {
+    display: inline-block; background: var(--accent); color: #ffffff;
+    font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+    padding: 5px 11px; border-radius: 999px; margin-bottom: 14px;
+  }
+  .price-mo { margin: -8px 0 16px; color: var(--muted); font-size: 15.5px; }
+  .price-mo b { color: var(--text); }
+  .care-label {
+    margin: 18px 0 4px; padding-top: 14px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 12.5px; font-weight: 700;
+    letter-spacing: 1.4px; text-transform: uppercase;
+  }
+  .price-note { color: var(--muted); font-size: 16px; margin: 20px 0 0; }
+
+  /* Accordion */
+  .acc { max-width: 760px; border-top: 1px solid var(--border); }
+  .acc-item { border-bottom: 1px solid var(--border); }
+  .acc-btn {
+    width: 100%; background: none; border: none; cursor: pointer;
+    color: var(--text); font: inherit; font-size: 18px; font-weight: 700; text-align: left;
+    padding: 20px 34px 20px 2px; position: relative;
+    transition: color 0.2s ease;
+  }
+  .acc-btn:hover { color: var(--accent); }
+  .acc-btn::after {
+    content: "+"; position: absolute; right: 4px; top: 50%;
+    transform: translateY(-50%); font-size: 24px; font-weight: 400; color: var(--accent);
+    transition: transform 0.3s ease;
+  }
+  .acc-item.open .acc-btn::after { transform: translateY(-50%) rotate(45deg); }
+  .acc-panel { overflow: hidden; }
+  .js .acc-panel { max-height: 0; transition: max-height 0.38s ease; }
+  .acc-panel p { margin: 0; padding: 0 2px 22px; color: var(--muted); font-size: 16.5px; max-width: 640px; }
+
+  /* Contact */
+  .contact-box {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 30px 26px; max-width: 760px;
+  }
+  .contact-box p { margin: 0 0 22px; font-size: 17.5px; max-width: 520px; }
+  .reply-note { color: var(--muted); font-size: 15px; margin-top: 18px; }
+
+  /* Footer */
+  footer { margin-top: 70px; border-top: 1px solid var(--border); background: var(--panel2); padding: 34px 0 40px; font-size: 14.5px; color: var(--muted); }
+  footer .foot-name { color: var(--text); font-size: 17px; font-weight: 800; margin: 0 0 4px; }
+  footer p { margin: 4px 0; }
+  .disclosure { margin-top: 16px; font-size: 13.5px; max-width: 560px; }
+
+  /* Mobile contact bar */
+  .contactbar { position: fixed; left: 0; right: 0; bottom: 0; display: flex; z-index: 70; box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.5); }
+  .contactbar a { flex: 1; text-align: center; color: #ffffff; font-weight: 700; font-size: 16px; text-decoration: none; padding: 16px 6px; }
+  .contactbar a:active { filter: brightness(1.2); }
+  .contactbar .cb-text { background: var(--accent); }
+  .contactbar .cb-mail { background: var(--panel); }
+
+  @media (min-width: 760px) {
+    body { padding-bottom: 0; }
+    .contactbar { display: none; }
+    nav { display: flex; }
+    .hero { padding-top: 96px; }
+    .hero h1 { font-size: 54px; }
+    section { padding-top: 84px; }
+    h2 { font-size: 36px; }
+    .cards { grid-template-columns: 1fr 1fr; }
+    .tiles { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .price-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 1080px) {
+    .tiles { grid-template-columns: repeat(5, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero::before { animation: none; }
+    .rotator { transition: none; }
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .card, .tile, .btn, .js .acc-panel { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap header-in">
+    <a class="logo" href="#top">MW Web <span>Co.</span><small>Websites and Google profiles for local trade shops</small></a>
+    <nav>
+      <a href="#check">The Check</a>
+      <a href="#get">What You Get</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#how">How It Works</a>
+      <a href="#work">The Work</a>
+      <a href="#answers">Answers</a>
+    </nav>
+    <a class="head-cta" href="sms:+18185550100">Text Us</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">MW Web Co. &middot; Los Angeles</p>
+    <h1>No calls, no meetings, everything by text and email, live in 7 days.</h1>
+    <p class="lede">A small website and a cleaned up Google profile for <span class="rotator" id="rotator">plumbers</span> around Los Angeles. One job: make the phone ring.</p>
+    <div class="chips">
+      <div class="chip">From <b>$495</b> to get started</div>
+      <div class="chip">Care plans from <b>$75</b> a month</div>
+      <div class="chip">Live in <b>7 days</b></div>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-main" href="sms:+18185550100">Text us to start</a>
+      <a class="btn btn-alt" href="#work">See the work</a>
+    </div>
+  </div>
+</div>
+
+<section id="check">
+  <div class="wrap">
+    <h2 class="reveal">Is your site losing you calls?</h2>
+    <p class="sub reveal">Five quick checks. Be honest.</p>
+    <div class="check-panel reveal">
+      <label class="check-item"><input type="checkbox" class="chk"> My phone number is not tap to call</label>
+      <label class="check-item"><input type="checkbox" class="chk"> My site has no contact form</label>
+      <label class="check-item"><input type="checkbox" class="chk"> My Google profile is unclaimed</label>
+      <label class="check-item"><input type="checkbox" class="chk"> My hours on Google are missing or wrong</label>
+      <label class="check-item"><input type="checkbox" class="chk"> My site has not been touched in 3 years</label>
+      <div class="check-result">
+        <div class="check-count"><span id="checkCount">0 of 5</span><small>sound familiar</small></div>
+        <p class="check-verdict" id="checkVerdict">Tick anything that sounds like your shop.</p>
+        <a class="btn btn-main" id="checkCta" href="sms:+18185550100">Text us about it</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="get">
+  <div class="wrap">
+    <h2 class="reveal">What you get</h2>
+    <p class="sub reveal">A phone first website. A claimed, correct, complete Google profile.</p>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-head">
+          <h3>The Setup</h3>
+          <div class="price-tag">$1,495<small>one time</small></div>
+        </div>
+        <ul>
+          <li>5 pages: Home, Services, About, Area, Contact</li>
+          <li>Built for phones first</li>
+          <li>Tap to call on every page</li>
+          <li>Quote form to your email and phone</li>
+          <li>Google profile claimed and verified</li>
+          <li>Categories, services, hours, photos set</li>
+          <li>Review request link set up</li>
+          <li>Phone tested before launch</li>
+        </ul>
+      </div>
+      <div class="card reveal d1">
+        <div class="card-head">
+          <h3>The Care Plan</h3>
+          <div class="price-tag">$150<small>per month</small></div>
+        </div>
+        <ul>
+          <li>Hosting, updates, backups</li>
+          <li>1 hour of small edits monthly</li>
+          <li>Monthly profile touch: photos, posts, hours</li>
+          <li>Uptime and form checks</li>
+          <li>One short report email a month</li>
+          <li>Month to month. Cancel any time.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <h2 class="reveal">Pricing</h2>
+    <p class="sub reveal">Three ways in. Every one looked after, every month.</p>
+    <div class="price-grid">
+      <div class="card price-card reveal">
+        <div class="card-head">
+          <h3>Profile Only</h3>
+          <div class="price-tag">$495<small>setup</small></div>
+        </div>
+        <p class="price-mo">then <b>$75</b> a month for care</p>
+        <ul>
+          <li>Google profile claimed and cleaned</li>
+          <li>Categories, services, hours, photos set</li>
+          <li>Review link and review text routine set up</li>
+        </ul>
+        <p class="care-label">The care plan</p>
+        <ul>
+          <li>Monthly profile check</li>
+          <li>Review monitoring and replies</li>
+          <li>Hours kept right</li>
+          <li>One proof email a month</li>
+        </ul>
+      </div>
+      <div class="card price-card featured reveal d1">
+        <span class="tier-badge">The standard choice</span>
+        <div class="card-head">
+          <h3>The Bundle</h3>
+          <div class="price-tag">$1,495<small>setup</small></div>
+        </div>
+        <p class="price-mo">then <b>$150</b> a month for care</p>
+        <ul>
+          <li>Everything in Profile Only</li>
+          <li>5 page website, built for phones first</li>
+          <li>Tap to call and quote form included</li>
+        </ul>
+        <p class="care-label">The care plan adds</p>
+        <ul>
+          <li>Hosting, updates, backups</li>
+          <li>1 hour of edits a month</li>
+          <li>One combined monthly report</li>
+        </ul>
+      </div>
+      <div class="card price-card reveal d2">
+        <div class="card-head">
+          <h3>Bundle Plus Text Back</h3>
+          <div class="price-tag">$1,995<small>setup</small></div>
+        </div>
+        <p class="price-mo">then <b>$299</b> a month for care</p>
+        <ul>
+          <li>Everything in The Bundle</li>
+          <li>Missed call text back installed</li>
+        </ul>
+        <p class="care-label">The care plan adds</p>
+        <ul>
+          <li>3 hours of edits a month</li>
+          <li>Edits back within 2 business days</li>
+          <li>A mid month check in report</li>
+          <li>A quarterly services and prices review</li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note reveal">Half the setup starts the work, half is due at launch. Every plan is month to month.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2 class="reveal">How it works</h2>
+    <p class="sub reveal">All in a text and email thread. No call at any step.</p>
+    <div class="tiles">
+      <div class="tile reveal">
+        <span class="num">1</span>
+        <h3>You text us</h3>
+        <p>Shop name and what you do. We reply with price and samples.</p>
+      </div>
+      <div class="tile reveal d1">
+        <span class="num">2</span>
+        <h3>Ten minute intake</h3>
+        <p>Services, hours, cities, photos. From your phone.</p>
+      </div>
+      <div class="tile reveal d2">
+        <span class="num">3</span>
+        <h3>Half down starts it</h3>
+        <p>Half your setup by payment link. Draft built in 2 days.</p>
+      </div>
+      <div class="tile reveal">
+        <span class="num">4</span>
+        <h3>You review the draft</h3>
+        <p>One round of changes in the thread. We clean your profile.</p>
+      </div>
+      <div class="tile reveal d1">
+        <span class="num">5</span>
+        <h3>Live on day 7</h3>
+        <p>Phone tested. You approve in writing, then it launches.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2 class="reveal">The work</h2>
+    <p class="sub reveal">Built the way a paid job is built. Judge the work first.</p>
+    <div class="cards">
+      <div class="card work-card reveal">
+        <h3>A garage door shop site</h3>
+        <p>Sample site for a fictional Burbank shop. Prices up front, tap to call everywhere.</p>
+        <a class="work-link" href="demo-summit-door.html">Open the sample site</a>
+      </div>
+      <div class="card work-card reveal d1">
+        <h3>A Google profile, before and after</h3>
+        <p>A Van Nuys HVAC shop, trading since 1951, profile unclaimed. The full fix plan.</p>
+        <a class="work-link" href="demo-gbp-banner-heating.html">Read the profile plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="answers">
+  <div class="wrap">
+    <h2 class="reveal">Straight answers</h2>
+    <p class="sub reveal">Tap a question.</p>
+    <div class="acc reveal">
+      <div class="acc-item">
+        <button class="acc-btn" type="button" aria-expanded="false">What does it cost, total?</button>
+        <div class="acc-panel"><p>Three ways in, and half the setup starts any of them. Profile Only is $495 to set up, then $75 a month, and The Bundle with your own website is $1,495, then $150 a month. Bundle Plus Text Back is $1,995 to set up, then $299 a month, and every plan runs month to month.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" type="button" aria-expanded="false">Why no calls?</button>
+        <div class="acc-panel"><p>No call is needed. Everything runs in writing, so nothing gets lost and the deal sits in front of you before you pay. If you would rather talk it through first, <a href="https://calendly.com/michaelwhisenand/discovery-call">Book a call</a> on an evening that suits you.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" type="button" aria-expanded="false">How fast, really?</button>
+        <div class="acc-panel"><p>Live in 7 days from your intake. Draft day 2, changes day 3, fixes and profile days 4 and 5, phone test day 6, live day 7. If we miss because of us, the launch half waits.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" type="button" aria-expanded="false">What if I do not like the draft?</button>
+        <div class="acc-panel"><p>One round of changes is included, and nothing launches without your written okay. If it misses entirely, the deposit comes back and we part clean.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-btn" type="button" aria-expanded="false">Who owns the site and the profile?</button>
+        <div class="acc-panel"><p>You do. Domain, profile, and content stay yours, even if you cancel.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Start with a text</h2>
+    <div class="contact-box reveal">
+      <p>Send your shop name and what you do. That is enough to start.</p>
+      <div class="btn-row">
+        <a class="btn btn-main" href="sms:+18185550100">Text (818) 555-0100</a>
+        <a class="btn btn-alt" href="mailto:hello@mwwebco.com">Email hello@mwwebco.com</a>
+      </div>
+      <p class="reply-note">You will hear back within one business day.</p>
+      <p class="reply-note">Rather talk it through? <a href="https://calendly.com/michaelwhisenand/discovery-call">Book a call</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-name">MW Web Co.</p>
+    <p>Run by Michael Whisenand, Sherman Oaks, CA</p>
+  </div>
+</footer>
+
+<div class="contactbar">
+  <a class="cb-text" href="sms:+18185550100">Text Us</a>
+  <a class="cb-mail" href="mailto:hello@mwwebco.com">Email Us</a>
+</div>
+
+<script>
+  // Sticky header state
+  var header = document.getElementById("siteHeader");
+  var headerScrolled = false;
+  function onScroll() {
+    var scrolled = window.scrollY > 10;
+    if (scrolled !== headerScrolled) {
+      headerScrolled = scrolled;
+      header.classList.toggle("scrolled", scrolled);
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Scroll reveal
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  // Rotating trade word in the hero
+  var words = ["plumbers", "electricians", "HVAC shops", "garage door crews", "contractors"];
+  var rotator = document.getElementById("rotator");
+  var wi = 0;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (rotator && !reduceMotion) {
+    setInterval(function () {
+      rotator.classList.add("fade");
+      setTimeout(function () {
+        wi = (wi + 1) % words.length;
+        rotator.textContent = words[wi];
+        rotator.classList.remove("fade");
+      }, 400);
+    }, 3000);
+  }
+
+  // Self check widget
+  var boxes = document.querySelectorAll(".chk");
+  var countEl = document.getElementById("checkCount");
+  var verdictEl = document.getElementById("checkVerdict");
+  var ctaEl = document.getElementById("checkCta");
+  var verdicts = [
+    "Tick anything that sounds like your shop.",
+    "One leak. Worth fixing before it costs you a job.",
+    "Two leaks. Customers are slipping past you.",
+    "Three leaks. Your site and profile are costing you calls.",
+    "Four leaks. The shop under you on Google is getting your customers.",
+    "All five. Your next customer is calling somebody else."
+  ];
+  function updateCheck() {
+    var n = 0;
+    boxes.forEach(function (b) { if (b.checked) { n = n + 1; } });
+    countEl.textContent = n + " of 5";
+    verdictEl.textContent = verdicts[n];
+    if (n > 0) { ctaEl.classList.add("live"); }
+    else { ctaEl.classList.remove("live"); }
+  }
+  boxes.forEach(function (b) { b.addEventListener("change", updateCheck); });
+  updateCheck();
+
+  // Accordion, one open at a time
+  var accItems = document.querySelectorAll(".acc-item");
+  accItems.forEach(function (item) {
+    var btn = item.querySelector(".acc-btn");
+    var panel = item.querySelector(".acc-panel");
+    btn.addEventListener("click", function () {
+      var isOpen = item.classList.contains("open");
+      accItems.forEach(function (other) {
+        other.classList.remove("open");
+        other.querySelector(".acc-btn").setAttribute("aria-expanded", "false");
+        other.querySelector(".acc-panel").style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

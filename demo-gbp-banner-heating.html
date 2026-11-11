@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Profile Work Sample | Banner Heating and Air Conditioning | MW Web Co.</title>
+<meta name="description" content="Work sample from MW Web Co. A current state audit and full fix plan for the Google Business Profile of Banner Heating and Air Conditioning Company in Van Nuys, built from public listing information only.">
+<style>
+  :root {
+    --bg: #0b0f19;
+    --panel: #131a2b;
+    --panel2: #0f1524;
+    --border: #1e293b;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #ff5a36;
+    --accent-dark: #e04427;
+    --gold: #fbbf24;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 52px 0 4px; }
+  h2 { font-size: 29px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -0.01em; }
+  h3 { font-size: 20px; margin: 34px 0 12px; }
+  .sub { color: var(--muted); margin: 0 0 26px; font-size: 16.5px; max-width: 680px; }
+  p { max-width: 760px; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(11, 15, 25, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; }
+  .logo { font-size: 21px; font-weight: 800; letter-spacing: 0.2px; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .logo small { display: block; font-size: 11.5px; font-weight: 400; color: var(--muted); letter-spacing: 0.4px; }
+  .back-link { font-weight: 700; text-decoration: none; font-size: 15px; white-space: nowrap; }
+  .back-link:hover { text-decoration: underline; }
+
+  /* Intro */
+  .intro { padding: 56px 0 4px; }
+  .eyebrow { color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: 2.2px; text-transform: uppercase; margin: 0 0 16px; }
+  .intro h1 { font-size: 34px; line-height: 1.18; margin: 0 0 18px; letter-spacing: -0.015em; max-width: 780px; }
+  .sample-card {
+    background: var(--panel); border: 1px solid var(--accent); border-radius: var(--radius);
+    padding: 24px 24px 10px; max-width: 820px;
+    box-shadow: 0 14px 34px rgba(255, 90, 54, 0.10);
+  }
+  .sample-card .tag {
+    display: inline-block; background: var(--accent); color: #ffffff;
+    font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+    padding: 5px 11px; border-radius: 999px; margin-bottom: 14px;
+  }
+  .sample-card p { margin: 0 0 14px; font-size: 16px; color: #dbe4ee; max-width: none; }
+  .sample-card p.sources { color: var(--muted); font-size: 14.5px; }
+
+  /* Panels and lists */
+  .panel {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px 24px;
+  }
+  .panel + .panel { margin-top: 16px; }
+  ul.plain { list-style: none; margin: 0; padding: 0; }
+  ul.plain li { padding: 7px 0 7px 28px; position: relative; color: #dbe4ee; font-size: 16px; max-width: 760px; }
+  ul.plain li::before { content: "\2713"; position: absolute; left: 2px; color: var(--accent); font-weight: 800; }
+  ul.plain li strong { color: var(--text); }
+
+  /* Audit */
+  .audit-item {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 20px 22px; margin-bottom: 12px; display: flex; gap: 18px;
+  }
+  .audit-item .num { font-size: 26px; font-weight: 800; color: var(--accent); line-height: 1.2; flex: none; min-width: 34px; }
+  .audit-item p { margin: 0; color: #dbe4ee; font-size: 16px; max-width: none; }
+  .audit-item .src { color: var(--muted); font-size: 14px; }
+
+  /* Services */
+  .services { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .service {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .service h4 { margin: 0 0 5px; font-size: 16.5px; }
+  .service p { margin: 0; color: var(--muted); font-size: 15.5px; max-width: none; }
+
+  /* Quote boxes */
+  .quote-box {
+    background: var(--panel2); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    border-radius: 10px; padding: 22px 24px; max-width: 820px;
+  }
+  .quote-box p { margin: 0; font-size: 16.5px; color: var(--text); max-width: none; }
+  .quote-box p + p { margin-top: 12px; }
+
+  /* Before and after */
+  .ba { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .ba-row { display: grid; grid-template-columns: 1fr; }
+  .ba-row + .ba-row { border-top: 1px solid var(--border); }
+  .ba-cell { padding: 18px 20px; font-size: 15.5px; }
+  .ba-area { background: var(--panel2); font-weight: 800; font-size: 16px; }
+  .ba-before { color: var(--muted); background: var(--panel); }
+  .ba-after { color: #dbe4ee; background: var(--panel); border-top: 1px dashed var(--border); }
+  .ba-head { display: none; }
+
+  /* Footer */
+  footer { margin-top: 70px; border-top: 1px solid var(--border); background: var(--panel2); padding: 34px 0 40px; font-size: 14.5px; color: var(--muted); }
+  footer .foot-name { color: var(--text); font-size: 17px; font-weight: 800; margin: 0 0 4px; }
+  footer p { margin: 4px 0; }
+
+  @media (min-width: 760px) {
+    .intro { padding-top: 72px; }
+    .intro h1 { font-size: 44px; }
+    h2 { font-size: 34px; }
+    .services { grid-template-columns: 1fr 1fr; }
+    .ba-row { grid-template-columns: 180px 1fr 1fr; }
+    .ba-row + .ba-row { border-top: 1px solid var(--border); }
+    .ba-after { border-top: none; border-left: 1px solid var(--border); }
+    .ba-before { border-left: 1px solid var(--border); }
+    .ba-head { display: grid; background: var(--panel2); }
+    .ba-head .ba-cell { color: var(--muted); font-size: 12.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; padding: 13px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="mwwebco-storefront.html">MW Web <span>Co.</span><small>Websites and Google profiles for local trade shops</small></a>
+    <a class="back-link" href="mwwebco-storefront.html">Back to MW Web Co.</a>
+  </div>
+</header>
+
+<div class="intro">
+  <div class="wrap">
+    <p class="eyebrow">Google Business Profile &middot; Work Sample</p>
+    <h1>Banner Heating and Air Conditioning Company, before and after</h1>
+    <div class="sample-card">
+      <span class="tag">Work sample</span>
+      <p>Built from public listing information only. The business has not been contacted. This is the Google Business Profile half of a Bundle spec demo, prepared to show what the cleanup work actually looks like on a real local shop.</p>
+      <p>Business: Banner Heating and Air Conditioning Company, Van Nuys, CA. HVAC.</p>
+      <p class="sources">Sources used: the verified prospect pool file (bundle-proof-of-pool-2026-11-10.md), the Birdeye profile page for the business (checked November 11, 2026), and the business website at banneraircon.com (checked November 11, 2026).</p>
+    </div>
+  </div>
+</div>
+
+<section id="audit">
+  <div class="wrap">
+    <h2>1. Current state audit</h2>
+    <p class="sub">Every fact below is documented in the pool file or visible on a public page named next to it. Nothing else is assumed.</p>
+
+    <div class="audit-item">
+      <span class="num">1</span>
+      <p>The Google profile is unclaimed. Birdeye states on the profile page: &quot;This profile has not been claimed by the business owner or representative.&quot; <span class="src">(Birdeye profile page, also recorded in the pool file.)</span> An unclaimed profile means the owner cannot edit it, reply to reviews, or correct wrong information, and anyone can suggest edits to it.</p>
+    </div>
+    <div class="audit-item">
+      <span class="num">2</span>
+      <p>Rating and reviews: 5.0 stars with 44 reviews. <span class="src">(Birdeye profile page. BestProsInTown also shows 5 out of 5, per the pool file.)</span> The reputation is excellent. The profile around it is not.</p>
+    </div>
+    <div class="audit-item">
+      <span class="num">3</span>
+      <p>Address and phone on the listing: 14717 1/2 Oxnard St, Van Nuys, CA 91411, phone (818) 988-7101. <span class="src">(Birdeye profile page, matches the website contact block.)</span></p>
+    </div>
+    <div class="audit-item">
+      <span class="num">4</span>
+      <p>Hours conflict. The listing shows Monday to Friday 8:00 a.m. to 5:00 p.m. and Saturday and Sunday 8:00 a.m. to 1:00 p.m. <span class="src">(Birdeye profile page.)</span> The company website advertises &quot;24/7 Emergency Service&quot; and &quot;available 24/7 for your emergency needs.&quot; <span class="src">(banneraircon.com homepage.)</span> A customer reading the Google profile sees a shop that closes at 5, while the shop itself says it answers around the clock. Both cannot be the first impression.</p>
+    </div>
+    <div class="audit-item">
+      <span class="num">5</span>
+      <p>The existing profile description is dated and cut off. The description shown on the profile reads: &quot;We have been servicing the San Fernando Valley for over 30 years. We perform installations on high quality Trane equipment. We are a Trane Dealer and we guarantee all of our HVAC work. We are loved on Yelp, Members of the BBB, Angi Super Service Contractor for 2017, 2018, and 2019 and fully insured.&quot; <span class="src">(Birdeye profile page, Additional Details.)</span> It leans on award years from 2017 to 2019 and ends mid sentence in the listing view.</p>
+    </div>
+    <div class="audit-item">
+      <span class="num">6</span>
+      <p>The company has traded far longer than the profile suggests. The business describes itself as one of the oldest heating and air conditioning companies in the San Fernando Valley, operating since 1951, and the homepage says it has served San Fernando Valley and West Los Angeles homes since 1951. <span class="src">(banneraircon.com homepage, also recorded in the pool file.)</span> The profile description says &quot;over 30 years,&quot; which undersells a 1951 start by decades.</p>
+    </div>
+    <div class="audit-item">
+      <span class="num">7</span>
+      <p>The website linked from the profile is stale. The homepage opens with leftover placeholder text, quoted as &quot;Add your custom HTM&quot; with &quot;L here&quot; on the following line, and still displays Angie's List award badges from 2008, 2009, 2010, 2011, 2013, and 2016. The contact email is bannerair@sbcglobal.net. <span class="src">(banneraircon.com homepage, also recorded in the pool file.)</span></p>
+    </div>
+    <div class="audit-item">
+      <span class="num">8</span>
+      <p>Small crew, owner in the field. The pool file records that the owner, Abbey, works in the field with a small crew, and one review says he &quot;came out the same day with a team of three technicians.&quot; <span class="src">(Pool file, from the business reviews.)</span> This is a hands on local shop, which is exactly the kind of business a well kept profile helps.</p>
+    </div>
+  </div>
+</section>
+
+<section id="fix">
+  <div class="wrap">
+    <h2>2. The fix list</h2>
+
+    <h3>Claim and verify the profile</h3>
+    <div class="panel">
+      <ul class="plain">
+        <li>Claim the Google Business Profile and complete verification, so the owner controls the name, hours, phone, photos, and review replies.</li>
+        <li>Confirm the business name, address, and phone match the website and invoices exactly: Banner Heating and Air Conditioning Company, 14717 1/2 Oxnard St, Van Nuys, CA 91411, (818) 988-7101.</li>
+        <li>Add the owner as the primary owner and one backup manager account so the profile is never locked to one login.</li>
+      </ul>
+    </div>
+
+    <h3>Categories</h3>
+    <div class="panel">
+      <ul class="plain">
+        <li><strong>Primary category:</strong> HVAC contractor.</li>
+        <li><strong>Secondary categories:</strong> Air conditioning contractor. Heating contractor. Air conditioning repair service. Furnace repair service.</li>
+        <li>One primary category keeps the profile focused on the searches that bring in jobs, and the secondary categories cover the repair and heating searches the shop already earns reviews for.</li>
+      </ul>
+    </div>
+
+    <h3>Services list</h3>
+    <p class="sub">Each service gets one plain sentence. All services below come from the services the company already lists on its own website.</p>
+    <div class="services">
+      <div class="service">
+        <h4>Air conditioning repair</h4>
+        <p>Diagnosis and repair of home and business cooling systems that are blowing warm, leaking, or not starting.</p>
+      </div>
+      <div class="service">
+        <h4>Air conditioning installation</h4>
+        <p>New system installation and replacement, including Trane equipment, with free in home estimates.</p>
+      </div>
+      <div class="service">
+        <h4>Heating and furnace repair</h4>
+        <p>Repair of furnaces and heating systems that will not start, cycle wrong, or heat unevenly.</p>
+      </div>
+      <div class="service">
+        <h4>Heat pump service</h4>
+        <p>Installation, repair, and maintenance of heat pump systems.</p>
+      </div>
+      <div class="service">
+        <h4>Wall heater service</h4>
+        <p>Repair and replacement of wall heaters.</p>
+      </div>
+      <div class="service">
+        <h4>Maintenance contracts</h4>
+        <p>Scheduled seasonal service visits that keep heating and cooling systems checked before the heavy use months.</p>
+      </div>
+      <div class="service">
+        <h4>Custom engineering and design</h4>
+        <p>Designed systems for homes and commercial spaces, including cooling for studios and computer rooms.</p>
+      </div>
+      <div class="service">
+        <h4>Emergency service</h4>
+        <p>Around the clock emergency heating and cooling calls, matching the 24/7 service the company already advertises on its website.</p>
+      </div>
+    </div>
+
+    <h3>Hours</h3>
+    <div class="panel">
+      <ul class="plain">
+        <li>Confirm the real hours with the owner first, then publish one consistent set on the profile, the website, and every directory.</li>
+        <li>Working set to confirm: Monday to Friday 8:00 a.m. to 5:00 p.m., Saturday and Sunday 8:00 a.m. to 1:00 p.m., as the listing shows today.</li>
+        <li>State the emergency line clearly in the description and a profile post, so the 24/7 emergency service the website promises is visible on Google too instead of contradicting the posted hours.</li>
+        <li>Add holiday hours for Thanksgiving, Christmas, and New Year each season, so customers never find a wrong open or closed status.</li>
+      </ul>
+    </div>
+
+    <h3>Attributes</h3>
+    <div class="panel">
+      <ul class="plain">
+        <li>Set every factual attribute Google offers for this business type, and only the ones that are true.</li>
+        <li>Mark that the business offers free in home estimates and takes online service requests, both of which the website already states.</li>
+        <li>Mark service options that apply, such as onsite services, once the owner confirms them.</li>
+        <li>Skip any attribute that cannot be backed up. Attributes are facts, not advertising.</li>
+      </ul>
+    </div>
+
+    <h3>Business description, rewritten</h3>
+    <p class="sub">The current description leans on award years from 2017 to 2019 and undersells the company history. Replacement description, written from documented facts only:</p>
+    <div class="quote-box">
+      <p>&quot;Banner Heating and Air Conditioning has served homes and businesses in the San Fernando Valley and West Los Angeles since 1951. The company installs, repairs, and maintains heating and cooling systems for residential, commercial, and industrial customers. Services include heat pumps, wall heaters, maintenance contracts, and custom engineering and design, including cooling for studios and computer rooms. Banner is a certified Trane Comfort Specialist dealer and offers free in home estimates. Emergency service is available 24 hours a day, 7 days a week. The company is fully insured and guarantees its HVAC work. Call (818) 988-7101 for service or an estimate.&quot;</p>
+    </div>
+    <p class="sub" style="margin-top: 18px;">Every claim in that paragraph is on the company website today: the 1951 start, the service area, the Trane Comfort Specialist dealer status, free in home estimates, 24/7 emergency service, fully insured, and the work guarantee.</p>
+
+    <h3>Photo plan</h3>
+    <p class="sub">Eighteen photos, all shot on a phone, no photographer and no stock images.</p>
+    <div class="panel">
+      <ul class="plain">
+        <li><strong>1 cover photo:</strong> the storefront or the service truck with the company name readable.</li>
+        <li><strong>2 exterior shots:</strong> the Oxnard St location from the street and the entrance.</li>
+        <li><strong>3 team shots:</strong> the owner and technicians in uniform, one group photo and two working shots.</li>
+        <li><strong>4 job shots:</strong> a technician servicing an outdoor unit, a furnace check, a thermostat install, and tools laid out on a real job.</li>
+        <li><strong>3 equipment shots:</strong> a new Trane install before and after, and one clean finished install close up.</li>
+        <li><strong>2 vehicle shots:</strong> the truck parked at a customer home and the truck loaded for the day.</li>
+        <li><strong>2 office shots:</strong> the dispatch desk and the phones, so the profile feels like a real working shop.</li>
+        <li><strong>1 logo photo:</strong> the company logo on a clean background for the profile logo slot.</li>
+        <li>Rule for every photo: real jobs, real people, taken in daylight where possible, and no customer faces or house numbers without permission.</li>
+      </ul>
+    </div>
+
+    <h3>Review routine</h3>
+    <p class="sub">The shop already earns 5 star reviews. It has no system asking for them, which is why 44 reviews is a small number for a company trading since 1951.</p>
+    <div class="panel">
+      <ul class="plain">
+        <li>One text message, sent after every completed job, to every customer, happy or not. No screening, no incentives, no discounts for reviews, which keeps the routine inside Google review policy.</li>
+        <li>The tech or the office sends it the same day, while the visit is fresh.</li>
+        <li>One follow up only if there is a problem, and that is a service call, not a second review ask. Review replies are handled under the monthly plan in section 4.</li>
+      </ul>
+    </div>
+    <p class="sub" style="margin-top: 18px;">Exact text message, with the profile review link dropped in at send time:</p>
+    <div class="quote-box">
+      <p>&quot;Hi, this is Banner Heating and Air Conditioning. Thanks for having us out today. If you have a minute, a Google review helps a local shop like ours more than any ad. Here is the link: [review link]. Thanks again for your business.&quot;</p>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="wrap">
+    <h2>3. Before and after summary</h2>
+    <p class="sub">Same shop, same reviews. The difference is whether the profile earns the click.</p>
+    <div class="ba">
+      <div class="ba-row ba-head">
+        <div class="ba-cell">Area</div>
+        <div class="ba-cell">Current state</div>
+        <div class="ba-cell">Fixed state</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Ownership</div>
+        <div class="ba-cell ba-before">Profile unclaimed, owner cannot edit or reply</div>
+        <div class="ba-cell ba-after">Profile claimed and verified, owner in control</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Rating use</div>
+        <div class="ba-cell ba-before">5.0 stars and 44 reviews sitting on an unfinished profile</div>
+        <div class="ba-cell ba-after">Same reviews presented on a complete profile that earns the click</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Categories</div>
+        <div class="ba-cell ba-before">One broad listing category shown on directory mirrors</div>
+        <div class="ba-cell ba-after">HVAC contractor primary, with repair and heating categories added</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Services</div>
+        <div class="ba-cell ba-before">No structured services list on the profile</div>
+        <div class="ba-cell ba-after">Eight services listed, each with a plain description</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Hours</div>
+        <div class="ba-cell ba-before">Listing hours conflict with the 24/7 emergency claim on the website</div>
+        <div class="ba-cell ba-after">One confirmed set of hours everywhere, emergency service stated plainly</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Description</div>
+        <div class="ba-cell ba-before">Leans on 2017 to 2019 awards, says over 30 years, ends mid sentence</div>
+        <div class="ba-cell ba-after">Plain description, leads with the 1951 start and the services people search for</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Photos</div>
+        <div class="ba-cell ba-before">Profile presentation depends on whatever directories have scraped</div>
+        <div class="ba-cell ba-after">Eighteen real photos, cover, team, trucks, and finished installs</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Reviews</div>
+        <div class="ba-cell ba-before">Reviews arrive by luck, no asking system</div>
+        <div class="ba-cell ba-after">One text after every job, sent to every customer</div>
+      </div>
+      <div class="ba-row">
+        <div class="ba-cell ba-area">Website link</div>
+        <div class="ba-cell ba-before">Homepage opens with placeholder text and 2008 to 2016 badges</div>
+        <div class="ba-cell ba-after">Clean site with no placeholder text, covered by the website half of the Bundle</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="care">
+  <div class="wrap">
+    <h2>4. What the $150 a month covers for the profile</h2>
+    <div class="panel">
+      <p style="margin-top: 0;">After setup, the profile sits inside the Bundle care plan at $150 a month, and the plan keeps it working instead of drifting back to stale. Month to month, cancel any time.</p>
+      <ul class="plain">
+        <li><strong>Review monitoring and replies.</strong> Every new review, good or bad, gets a reply written in the shop voice and approved before posting where the owner wants that.</li>
+        <li><strong>Monthly profile touch.</strong> New job photos added each month and the review link checked, so the profile always shows current work.</li>
+        <li><strong>Hours kept right.</strong> Seasonal hours, holiday hours, and one off closures posted before they happen.</li>
+        <li><strong>One short proof report a month.</strong> What changed, how many reviews came in, the current rating, and what the profile looked like in search that month, reported in one short email.</li>
+      </ul>
+      <p style="margin-bottom: 0;">The owner sees exactly what the money bought, without a meeting or a call.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-name">MW Web Co.</p>
+    <p>Work sample built from public listing information. The business has not been contacted.</p>
+    <p><a href="mwwebco-storefront.html">Back to MW Web Co.</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
