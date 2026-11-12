@@ -11,7 +11,7 @@
     --bg: #0b0f19;
     --panel: #131a2b;
     --panel2: #0f1524;
-    --border: #1e293b;
+    --border: #1a2438;
     --text: #f8fafc;
     --muted: #94a3b8;
     --accent: #ff5a36;
@@ -78,6 +78,7 @@
   .hero .lede { font-size: 19px; color: var(--muted); margin: 0 0 26px; max-width: 600px; }
   .rotator { color: var(--accent); display: inline-block; font-weight: 700; transition: opacity 0.4s ease, transform 0.4s ease; white-space: nowrap; }
   .rotator.fade { opacity: 0; transform: translateY(6px); }
+  .lede-line { display: block; }
   .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 30px; }
   .chip {
     border: 1px solid var(--border); background: var(--panel); color: var(--text);
@@ -241,6 +242,8 @@
   @media (min-width: 1024px) {
     .wrap { max-width: 1140px; }
     .hero h1 { font-size: 62px; max-width: 1040px; }
+    .hero .lede { max-width: 780px; }
+    .lede-line:first-child { white-space: nowrap; }
     .check-panel {
       max-width: none;
       display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
@@ -271,7 +274,7 @@
   <div class="wrap">
     <p class="eyebrow">MW Web Co. &middot; Los Angeles</p>
     <h1>Websites and Google profiles for trade shops, live in 7 days.</h1>
-    <p class="lede">A small website and a cleaned up Google profile for <span class="rotator" id="rotator">plumbers</span> around Los Angeles. One job: make the phone ring.</p>
+    <p class="lede"><span class="lede-line">A small website and a cleaned up Google profile for <span class="rotator" id="rotator">plumbers</span></span><span class="lede-line">around Los Angeles. One job: make the phone ring.</span></p>
     <div class="chips">
       <div class="chip">From <b>$495</b> to get started</div>
       <div class="chip">Care plans from <b>$75</b> a month</div>
@@ -559,7 +562,7 @@
   }
 
   // Rotating trade word in the hero
-  var words = ["plumbers", "electricians", "HVAC shops", "garage door crews", "contractors"];
+  var words = ["plumbers", "electricians", "HVAC shops", "garage door crews", "contractors", "roofers", "painters", "landscapers", "locksmiths", "concrete crews"];
   var rotator = document.getElementById("rotator");
   var wi = 0;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
