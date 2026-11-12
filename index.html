@@ -562,19 +562,21 @@
   }
 
   // Rotating trade word in the hero
-  var words = ["plumbers", "electricians", "HVAC shops", "garage door crews", "contractors", "roofers", "painters", "landscapers", "locksmiths", "concrete crews"];
+  var words = ["plumbers", "salons", "electricians", "cafes", "HVAC shops", "bakeries", "garage door crews", "boutiques", "contractors", "pet groomers", "roofers", "gyms", "landscapers", "auto shops"];
   var rotator = document.getElementById("rotator");
-  var wi = 0;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (rotator && !reduceMotion) {
-    setInterval(function () {
+    var wi = 0;
+    var rotCycle = function () {
       rotator.classList.add("fade");
       setTimeout(function () {
         wi = (wi + 1) % words.length;
         rotator.textContent = words[wi];
         rotator.classList.remove("fade");
+        setTimeout(rotCycle, 3000);
       }, 400);
-    }, 3000);
+    };
+    setTimeout(rotCycle, 3000);
   }
 
   // Self check widget
